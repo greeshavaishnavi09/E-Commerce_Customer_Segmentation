@@ -2,5 +2,5 @@ artifacts_root: artifacts
 
 data_ingestion:
   root_dir: artifacts/data_ingestion
-  source_data_file: data/Online Retail.xlsx
+  source_data_file: "C:/Users/Greesha Vaishnavi/Downloads/online+retail/Online Retail.xlsx"
   local_data_file: artifacts/data_ingestion/Online Retail.xlsx

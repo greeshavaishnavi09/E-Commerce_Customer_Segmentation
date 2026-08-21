@@ -216,3 +216,21 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Environments and Virtual Envs
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+clust/
+
+# MLOps Pipeline Outputs (Your specific project overrides)
+artifacts/
+logs/
+*.log
+
+
