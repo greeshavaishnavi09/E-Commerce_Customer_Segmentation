@@ -6,9 +6,9 @@ with open("README.md", "r", encoding = "utf-8") as f:
 
 __version__ = "0.0.0"
 
-REPO_NAME = "E-Commerce_Customer_Segmentation"
+REPO_NAME = "E_Commerce_Customer_Segmentation"
 AUTHOR_USER_NAME = "Greesha Vaishnavi"
-SRC_REPO = "E-Commerce_Customer_Segmentation"
+SRC_REPO = "E_Commerce_Customer_Segmentation"
 AUTHOR_EMAIL = "greeshavaishnavi@gmail.com"
 
 setuptools.setup(

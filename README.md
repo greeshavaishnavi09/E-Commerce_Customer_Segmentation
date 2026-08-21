@@ -1,2 +1,2 @@
-# E-Commerce_Customer_Segmentation
+# E_Commerce_Customer_Segmentation
 unsupervised dataset

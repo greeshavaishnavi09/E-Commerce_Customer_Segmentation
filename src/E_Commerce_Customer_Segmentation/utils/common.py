@@ -6,7 +6,7 @@ from box.exceptions import BoxValueError
 from box import ConfigBox
 from ensure import ensure_annotations
 
-from E-Commerce_Customer_Segmentation.logging import logger
+from E_Commerce_Customer_Segmentation.logging import logger
 
 
 @ensure_annotations
