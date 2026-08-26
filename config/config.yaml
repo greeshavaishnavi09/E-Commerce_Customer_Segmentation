@@ -5,3 +5,7 @@ data_ingestion:
   source_data_file: data/raw/Online Retail.xlsx
   local_data_file: artifacts/data_ingestion/Online Retail.xlsx
 
+data_validation:
+  root_dir: artifacts/data_validation
+  data_file: artifacts/data_ingestion/Online Retail.xlsx
+  status_file: artifacts/data_validation/status.txt

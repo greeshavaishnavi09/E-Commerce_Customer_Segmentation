@@ -19,4 +19,4 @@ logging.basicConfig(
     ]
 )
 
-logger = logging.getLogger(" E Commerce Customer Segmentation logger")
+logger = logging.getLogger("E_Commerce_Customer_Segmentation_logger")

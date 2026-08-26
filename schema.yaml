@@ -1,0 +1,12 @@
+COLUMNS:
+  InvoiceNo: object
+  StockCode: object
+  Description: object
+  Quantity: int64
+  InvoiceDate: datetime64[ns]
+  UnitPrice: float64
+  CustomerID: float64
+  Country: object
+
+TARGET_COLUMN:
+  name: null

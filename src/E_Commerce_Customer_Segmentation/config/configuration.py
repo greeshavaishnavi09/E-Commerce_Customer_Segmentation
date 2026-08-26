@@ -3,6 +3,8 @@ from E_Commerce_Customer_Segmentation.logging import logger
 from pathlib import Path
 from E_Commerce_Customer_Segmentation.utils.common import read_yaml,create_directories
 from E_Commerce_Customer_Segmentation.entity.config_entity import DataIngestionConfig
+from E_Commerce_Customer_Segmentation.entity.config_entity import DataValidationConfig
+
 
 class ConfigurationManager:
 
@@ -30,3 +32,18 @@ class ConfigurationManager:
         )
 
         return data_ingestion_config
+
+
+    def get_data_validation_config(self) -> DataValidationConfig:
+
+        config = self.config.data_validation
+
+        create_directories([config.root_dir])
+
+        data_validation_config = DataValidationConfig(
+            root_dir=Path(config.root_dir),
+            data_file=Path(config.data_file),
+            status_file=Path(config.status_file)
+        )
+
+        return data_validation_config
