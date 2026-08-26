@@ -4,3 +4,4 @@ data_ingestion:
   root_dir: artifacts/data_ingestion
   source_data_file: data/raw/Online Retail.xlsx
   local_data_file: artifacts/data_ingestion/Online Retail.xlsx
+
