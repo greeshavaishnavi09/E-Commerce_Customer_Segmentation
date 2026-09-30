@@ -5,6 +5,7 @@ from E_Commerce_Customer_Segmentation.utils.common import read_yaml,create_direc
 from E_Commerce_Customer_Segmentation.entity.config_entity import DataIngestionConfig
 from E_Commerce_Customer_Segmentation.entity.config_entity import DataValidationConfig
 from E_Commerce_Customer_Segmentation.entity.config_entity import DataTransformationConfig
+from E_Commerce_Customer_Segmentation.entity.config_entity import ModelTrainerConfig
 
 class ConfigurationManager:
 
@@ -62,3 +63,20 @@ class ConfigurationManager:
         )
 
         return data_transformation_config
+
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+
+        config = self.config["model_trainer"]
+
+        create_directories([config.root_dir])
+
+        model_trainer_config = ModelTrainerConfig(
+
+            root_dir=Path(config.root_dir),
+            transformed_data_file=Path(config.transformed_data_file),
+            trained_model_path=Path(config.trained_model_path),
+            scaler_path=Path(config.scaler_path),
+            model_report_path=Path(config.model_report_path)
+        )
+
+        return model_trainer_config
