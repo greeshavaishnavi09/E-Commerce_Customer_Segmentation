@@ -22,3 +22,10 @@ model_trainer:
   trained_model_path: artifacts/model_trainer/model.pkl
   scaler_path: artifacts/model_trainer/scaler.pkl
   model_report_path: artifacts/model_trainer/model_report.csv
+
+model_evaluation:
+  root_dir: artifacts/model_evaluation
+  transformed_data_file: artifacts/data_transformation/customer_rfm.csv
+  trained_model_path: artifacts/model_trainer/model.pkl
+  scaler_path: artifacts/model_trainer/scaler.pkl
+  report_path: artifacts/model_evaluation/evaluation_report.csv

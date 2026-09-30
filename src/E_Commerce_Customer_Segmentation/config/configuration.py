@@ -6,6 +6,7 @@ from E_Commerce_Customer_Segmentation.entity.config_entity import DataIngestionC
 from E_Commerce_Customer_Segmentation.entity.config_entity import DataValidationConfig
 from E_Commerce_Customer_Segmentation.entity.config_entity import DataTransformationConfig
 from E_Commerce_Customer_Segmentation.entity.config_entity import ModelTrainerConfig
+from E_Commerce_Customer_Segmentation.entity.config_entity import ModelEvaluationConfig
 
 class ConfigurationManager:
 
@@ -80,3 +81,24 @@ class ConfigurationManager:
         )
 
         return model_trainer_config
+
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+
+        config = self.config["model_evaluation"]
+
+        create_directories([config.root_dir])
+
+        model_evaluation_config = ModelEvaluationConfig(
+
+            root_dir=Path(config.root_dir),
+
+            transformed_data_file=Path(config.transformed_data_file),
+
+            trained_model_path=Path(config.trained_model_path),
+
+            scaler_path=Path(config.scaler_path),
+
+            report_path=Path(config.report_path)
+        )
+
+        return model_evaluation_config

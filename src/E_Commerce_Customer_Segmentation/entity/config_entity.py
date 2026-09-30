@@ -39,3 +39,12 @@ class ModelTrainerConfig:
 
     # Path to save model comparison report
     model_report_path: Path 
+
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+
+    root_dir: Path
+    transformed_data_file: Path
+    trained_model_path: Path
+    scaler_path: Path
+    report_path: Path
