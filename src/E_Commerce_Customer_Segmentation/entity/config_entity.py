@@ -48,3 +48,9 @@ class ModelEvaluationConfig:
     trained_model_path: Path
     scaler_path: Path
     report_path: Path
+
+@dataclass(frozen=True)
+class PredictionConfig:
+    root_dir: Path
+    trained_model_path: Path
+    scaler_path: Path

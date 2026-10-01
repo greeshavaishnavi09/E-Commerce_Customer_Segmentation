@@ -29,3 +29,8 @@ model_evaluation:
   trained_model_path: artifacts/model_trainer/model.pkl
   scaler_path: artifacts/model_trainer/scaler.pkl
   report_path: artifacts/model_evaluation/evaluation_report.csv
+
+prediction:
+  root_dir: artifacts/prediction
+  trained_model_path: artifacts/model_trainer/model.pkl
+  scaler_path: artifacts/model_trainer/scaler.pkl

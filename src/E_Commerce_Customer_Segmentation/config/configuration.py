@@ -7,6 +7,7 @@ from E_Commerce_Customer_Segmentation.entity.config_entity import DataValidation
 from E_Commerce_Customer_Segmentation.entity.config_entity import DataTransformationConfig
 from E_Commerce_Customer_Segmentation.entity.config_entity import ModelTrainerConfig
 from E_Commerce_Customer_Segmentation.entity.config_entity import ModelEvaluationConfig
+from E_Commerce_Customer_Segmentation.entity.config_entity import PredictionConfig
 
 class ConfigurationManager:
 
@@ -102,3 +103,18 @@ class ConfigurationManager:
         )
 
         return model_evaluation_config
+
+
+    def get_prediction_config(self) -> PredictionConfig:
+
+        config = self.config["prediction"]
+
+        create_directories([config.root_dir])
+
+        prediction_config = PredictionConfig(
+            root_dir=Path(config.root_dir),
+            trained_model_path=Path(config.trained_model_path),
+            scaler_path=Path(config.scaler_path)
+        )
+
+        return prediction_config
